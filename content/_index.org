@@ -19,3 +19,6 @@ Programmer, student, */unknown thinker/*
 
 #+caption: Fog exhibition in Munich
 [[https://raw.githubusercontent.com/def4alt/def4alt.github.io/master/assets/fog.jpg]]
+
+#+caption: Sad Symonenko
+[[https://raw.githubusercontent.com/def4alt/def4alt.github.io/master/assets/symonenko.jpg]]
