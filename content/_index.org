@@ -1,25 +1,21 @@
 ---
 title: "Home page"
 date: 2022-08-20T20:01:03+02:00
-draft: true
+draft: false
 ---
 
 * Andrii Olkhovych
-Programmer, student, */unknown philosopher/*
+Programmer, student, */unknown thinker/*
 
 * Some of my photos
-#+attr_html: :width 500px
-#+attr_latex: :width 500px
-[[../assets/dog.jpg]]
+#+caption: My beloved dog
+[[https://raw.githubusercontent.com/def4alt/def4alt.github.io/master/assets/dog.jpg]]
 
-#+attr_html: :width 500px
-#+attr_latex: :width 500px
-[[../assets/fall.jpg]]
+#+caption: Beautiful fall in Kyiv
+[[https://raw.githubusercontent.com/def4alt/def4alt.github.io/master/assets/fall.jpg]]
 
-#+attr_html: :width 500px
-#+attr_latex: :width 500px
-[[../assets/kashtan.jpg]]
+#+caption: Two friends in Kashtan
+[[https://raw.githubusercontent.com/def4alt/def4alt.github.io/master/assets/kashtan.jpg]]
 
-#+attr_html: :width 500px
-#+attr_latex: :width 500px
-[[../assets/fog.jpg]]
+#+caption: Fog exhibition in Munich
+[[https://raw.githubusercontent.com/def4alt/def4alt.github.io/master/assets/fog.jpg]]
