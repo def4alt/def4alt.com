@@ -1,0 +1,25 @@
+---
+title: "Home page"
+date: 2022-08-20T20:01:03+02:00
+draft: true
+---
+
+* Andrii Olkhovych
+Programmer, student, */unknown philosopher/*
+
+* Some of my photos
+#+attr_html: :width 500px
+#+attr_latex: :width 500px
+[[../assets/dog.jpg]]
+
+#+attr_html: :width 500px
+#+attr_latex: :width 500px
+[[../assets/fall.jpg]]
+
+#+attr_html: :width 500px
+#+attr_latex: :width 500px
+[[../assets/kashtan.jpg]]
+
+#+attr_html: :width 500px
+#+attr_latex: :width 500px
+[[../assets/fog.jpg]]
