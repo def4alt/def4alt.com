@@ -10,6 +10,6 @@ While studying in school, I've always tried to deepen my knowledge of programmin
 
 I watch conferences, such as [[https://ndcconferences.com/][NDC]], [[https://gdconf.com/][GDC]], [[https://gotopia.tech/][GOTO Meetups]], etc., to gain motivation and best practices to program better. So far, I'm writing this text in DOOM Emacs distribution with Rust, Typescript, Org, C++, and LaTeX plugins enabled. At home, I have set up Fedora Linux, but right now, due to the Russian-Ukrainian war, I have no access to it.
 
-However, I don't forget about my social life too. I play guitar and spend time with my friends. As a child, I enjoyed going to the camps, particularly "Kashtan," which merch bracelet I wear even now.
+However, I don't forget about my social life too. As a child, I enjoyed going to the camps, particularly "Kashtan," which merch bracelet I wear even now. I play guitar and spend time with my friends. Sometimes, I can write some essays about different topics and provide some new ideas. Also, I really like to chat with boys and girls about deep thoughts. Overall, I like to analyze myself and the people surrounding me. It just gives me some sort of confidence?
 
-Right now, I am strongly motivated to study Computer Science and will continue to improve in this field.
+Right now, I am a young lad motivated to study CS and willing to continue to improve in all the fields he can and want.
