@@ -1,6 +1,15 @@
 ---
-title: "Sdcalculatorweb"
+title: "SDCalculator"
 date: 2022-08-20T18:32:37+02:00
 draft: true
 ---
 
+A software to automate statistical processing of laboratory research data and graphical interpretation of its results.
+
+* Screenshots
+
+#+caption: Menu of the program
+[[https://raw.githubusercontent.com/def4alt/def4alt.github.io/master/assets/sdcalculatorweb-menu.jpg]]
+
+#+caption: Built charts
+[[https://raw.githubusercontent.com/def4alt/def4alt.github.io/master/assets/sdcalculatorweb-charts.jpg]]
