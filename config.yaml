@@ -13,9 +13,9 @@ enableEmoji: true
 pygmentsUseClasses: true
 
 taxonomies:
-  category: "categories"
-  tag: "tags"
-  series: "series"
+    category: "categories"
+    tag: "tags"
+    series: "series"
 
 minify:
     disableXML: true
@@ -26,9 +26,9 @@ languages:
         languageName: "English"
         weight: 1
         taxonomies:
-          category: categories
-          tag: tags
-          series: series
+            category: categories
+            tag: tags
+            series: series
         menu:
             main:
                 - name: Posts
@@ -40,12 +40,22 @@ languages:
                 - name: Tags
                   url: tags/
                   weight: 10
+                - name: About
+                  url: about
+                  weight: 12
 
 outputs:
     home:
         - HTML
         - RSS
         - JSON
+
+assets:
+    disableFingerprinting: true
+    favicon: "icons/favicon.ico"
+    favicon16x16: "icons/favicon-16x16.png"
+    favicon32x32: "icons/favicon-32x32.png"
+    apple_touch_icon: "icons/apple-touch-icon.png"
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
@@ -60,6 +70,7 @@ params:
     ShowPostNavLinks: true
     ShowBreadCrumbs: true
     ShowCodeCopyButtons: true
+    ShowWordCount: true
     ShowRssButtonInSectionTermList: true
     ShowToc: true
 
@@ -122,29 +133,26 @@ markup:
         # lineNos: true
         # style: monokai
 
-
 privacy:
-  googleAnalytics:
-    disable: true
-  vimeo:
-    disable: false
-    enableDNT: true
-    simple: true
-  twitter:
-    disable: false
-    enableDNT: true
-    simple: true
-  instagram:
-    disable: false
-    simple: true
-  youtube:
-    disable: false
-    privacyEnhanced: true
+    googleAnalytics:
+        disable: true
+    vimeo:
+        disable: false
+        enableDNT: true
+        simple: true
+    twitter:
+        disable: false
+        enableDNT: true
+        simple: true
+    instagram:
+        disable: false
+        simple: true
+    youtube:
+        disable: false
+        privacyEnhanced: true
 
 services:
     instagram:
         disableInlineCSS: true
     twitter:
         disableInlineCSS: true
-
-
