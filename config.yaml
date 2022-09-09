@@ -1,7 +1,7 @@
 baseURL: https://def4alt.github.io
 title: def4alt
 paginate: 5
-theme: papermod
+theme: "PaperMod"
 defaultContentLanguage: "en"
 
 enableInlineShortcodes: true
