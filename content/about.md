@@ -16,3 +16,14 @@ I watch conferences, such as [NDC](https://ndcconferences.com/), [GDC](https://g
 However, I don't forget about my social life too. As a child, I enjoyed going to the camps, particularly "Kashtan," which merch bracelet I wear even now. I play guitar and spend time with my friends. Sometimes, I can write some essays about different topics and provide some new ideas. Also, I really like to chat with boys and girls about deep thoughts. Overall, I like to analyze myself and the people surrounding me. It just gives me some sort of confidence?
 
 Right now, I am a young lad motivated to study CS and willing to continue to improve in all the fields I can and want.
+
+# Some of my photos
+
+![My beloved dog](https://raw.githubusercontent.com/def4alt/def4alt.github.io/master/assets/images/dog.jpg "My beloved dog")
+
+![Beautiful fall in Kyiv](https://raw.githubusercontent.com/def4alt/def4alt.github.io/master/assets/images/fall.jpg "Beautiful fall in Kyiv")
+
+![Two friends in Kashtan](https://raw.githubusercontent.com/def4alt/def4alt.github.io/master/assets/images/kashtan.jpg "Two friends in Kashtan")
+
+![Fog exhibition in Munich](https://raw.githubusercontent.com/def4alt/def4alt.github.io/master/assets/images/fog.jpg "Fog exhibition in Munich")
+
