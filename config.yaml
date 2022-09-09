@@ -86,6 +86,8 @@ params:
     socialIcons:
         - name: github
           url: "https://github.com/def4alt"
+        - name: Email
+          url: "mailto:the.def4alt@gmail.com"
         - name: Rss
           url: "index.xml"
 
