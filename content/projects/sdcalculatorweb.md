@@ -3,6 +3,7 @@ title: "SDCalculator"
 date: 2022-08-20T18:32:37+02:00
 categories: ["Projects", "Web", "Typescript"]
 tags: ["web", "project", "preact", "tailwindcss", "supabase", "typescript", "vercel", "chart.js"]
+summary: A software to automate statistical processing of laboratory research data and graphical interpretation of its results.
 draft: false
 ---
 # [Link](https://sdcalculator.vercel.app)
