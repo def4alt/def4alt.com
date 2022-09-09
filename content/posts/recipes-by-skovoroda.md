@@ -4,7 +4,7 @@ date: 2019-12-14
 draft: false
 ---
 
-* У чому щастя людини: рецепти від Григорія Сковороди (English version below)
+# У чому щастя людини: рецепти від Григорія Сковороди (English version below)
 
 Для кожної людини щастя - це щось найприємніше. Саме ця приємність виділяє людину серед інших і кожна людина унікальна за набором цих приємностей. Григорій Сковорода вважав, що щастя людина відняйде тільки пізнавши Бога, пізнавши себе, а потім "сродню працю". Мабуть усі згодні із цим твердженням.
 
@@ -16,7 +16,7 @@ draft: false
 
 Отже, для кожної людини щастя - це щось найприємніше. Саме ця приємність виділяє людину серед інших і кожна людина унікальна за набором цих приємностей. Григорій Сковорода вважав, що щастя - це пік Евересту, романтична система всесвіту людини та міст між пеклом та раєм, що постійно руйнується. Усі згодні із цим твердженням.
 
-* What is the happiness of a person: recipes from Hryhorii Skovoroda
+# What is the happiness of a person: recipes from Hryhorii Skovoroda
 
 For every person, happiness is the most pleasant thing. It is this pleasure that distinguishes a person from others, and each person is unique in terms of a set of these pleasures. Hryhorii Skovoroda believed that a person will find happiness only after knowing God, knowing himself, and then "related work". Everyone agrees with this statement.
 
