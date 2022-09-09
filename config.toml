@@ -5,7 +5,7 @@ author = "Andrii Olkhovych"
 copyright = "© 2022 Andrii Olkhovych"
 paginate = 3
 languageCode = "en"
-DefaultContentLanguage = "en"
+defaultContentLanguage = "en"
 enableInlineShortcodes = true
 # prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
 # See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
@@ -19,7 +19,7 @@ noindex = false
 
 [params.theme]
 palette = "gruvbox-dark"
-mode = "dark-mode"
+mode = "light-mode"
 
 # Sidebar: about/bio
 [params.about]
