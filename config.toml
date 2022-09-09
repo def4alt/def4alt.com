@@ -1,5 +1,5 @@
 baseURL = "https://def4alt.github.io/"
-theme = "risotto"
+theme = "papermod"
 title = "def4alt"
 author = "Andrii Olkhovych"
 copyright = "© 2022 Andrii Olkhovych"
@@ -16,10 +16,6 @@ sectionPagesMenu = "main"
 
 [params]
 noindex = false
-
-[params.theme]
-palette = "gruvbox-dark"
-mode = "light-mode"
 
 # Sidebar: about/bio
 [params.about]
