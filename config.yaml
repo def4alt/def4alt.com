@@ -1,5 +1,5 @@
 baseURL: https://def4alt.github.io
-title: def4alt
+title: "Def4alt's Personal Blog"
 paginate: 5
 theme: "PaperMod"
 defaultContentLanguage: "en"
@@ -59,7 +59,7 @@ assets:
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    description: "My personal blog"
+    description: "My personal blog to share my thoughts, ideas, knowledge and projects"
     author: Andrii Olkhovych
 
     defaultTheme: auto
