@@ -62,7 +62,7 @@ params:
     author: Andrii Olkhovych
 
     defaultTheme: auto
-    ShowShareButtons: true
+    ShowShareButtons: false
     ShowReadingTime: true
     # disableSpecial1stPost: true
     displayFullLangName: true
@@ -80,18 +80,15 @@ params:
         enabled: true
         Title: "Andrii Olkhovych"
         Content: >
-            Programmer, student, **_unknown thinker_**
+            student, programmer
 
     socialIcons:
-        - name: github
+        - name: Github
           url: "https://github.com/def4alt"
         - name: Email
           url: "mailto:the.def4alt@gmail.com"
-
-    editPost:
-        URL: "https://github.com/def4alt/def4alt.github.io/tree/main/content"
-        Text: "Suggest Changes" # edit text
-        appendFilePath: true # to append file path to Edit link
+        - name: LinkedIn
+          url: "https://www.linkedin.com/in/def4alt/"
 
     # label:
     #     text: "Home"
