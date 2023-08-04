@@ -47,7 +47,6 @@ languages:
 outputs:
     home:
         - HTML
-        - RSS
         - JSON
 
 assets:
@@ -71,7 +70,7 @@ params:
     ShowBreadCrumbs: true
     ShowCodeCopyButtons: true
     ShowWordCount: true
-    ShowRssButtonInSectionTermList: true
+    ShowRssButtonInSectionTermList: false
     ShowToc: true
 
     profileMode:
@@ -88,8 +87,6 @@ params:
           url: "https://github.com/def4alt"
         - name: Email
           url: "mailto:the.def4alt@gmail.com"
-        - name: Rss
-          url: "index.xml"
 
     editPost:
         URL: "https://github.com/def4alt/def4alt.github.io/tree/main/content"
