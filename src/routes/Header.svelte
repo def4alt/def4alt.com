@@ -5,14 +5,56 @@
 <header>
 	<nav>
 		<ul>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
+			<li aria-current={$page.url.pathname === '/posts' ? 'page' : undefined}>
+				<a href="/posts">posts</a>
 			</li>
-			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-				<a href="/about">About</a>
+			<li aria-current={$page.url.pathname === '/projects' ? 'page' : undefined}>
+				<a href="/projects">projects</a>
 			</li>
 		</ul>
+		<div class="bird">J</div>
+		<a class="def4alt" href="/">def4alt</a>
 	</nav>
 </header>
 
-<style></style>
+<style>
+	nav {
+		height: 10rem;
+		width: 100vw;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	.bird {
+		font-variant-alternates: styleset(symbols);
+		user-select: none;
+		color: var(--color-background);
+		font-size: 8rem;
+	}
+
+	.def4alt {
+		font-variant-numeric: proportional-nums;
+		font-size: 4rem;
+		color: var(--color-background);
+		font-variant-alternates: styleset(alternate);
+	}
+
+	ul {
+		display: flex;
+		flex-direction: row;
+		padding: 0;
+		gap: 30px;
+		& li {
+			list-style-type: none;
+			& a {
+				color: var(--color-background);
+				font-variant-alternates: styleset(alternate);
+				text-transform: lowercase;
+				font-size: 2rem;
+				font-weight: 400;
+			}
+		}
+	}
+</style>

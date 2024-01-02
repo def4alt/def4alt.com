@@ -5,6 +5,14 @@
     src: local(''), url('/fonts/FixelVariable.ttf') format('truetype-variations');
 }
 
+@font-feature-values Fixel {
+	@styleset {
+		symbols: 5;
+		alternate: 1;
+	}
+
+}
+
 @font-face {
     font-family: 'Fixel Italic';
     font-style: italic;
