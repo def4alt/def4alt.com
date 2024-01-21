@@ -1,18 +1,12 @@
 <script lang="ts">
-	import Marqueeck, { type MarqueeckOptions, type MarqueeckHoverEvent } from '@arisbh/marqueeck';
+	import Marqueeck, { type MarqueeckOptions } from '@arisbh/marqueeck';
 
 	export let title: string;
 	export let content: string;
 
-	let hovered = false;
-
 	let halfLength = Math.ceil(content.length / 2);
 	let firstLine = content.substring(0, halfLength);
 	let secondLine = content.substring(halfLength);
-
-	const handleHover = (e: MarqueeckHoverEvent) => {
-		hovered = e.detail.valueOf();
-	};
 
 	const options = {
 		direction: 'left',
@@ -20,12 +14,7 @@
 	} as MarqueeckOptions;
 </script>
 
-<Marqueeck
-	{options}
-	hoverClasses="language-hover"
-	stickyClasses="language-title"
-	on:hover={handleHover}
->
+<Marqueeck {options} hoverClasses="language-hover" stickyClasses="language-title">
 	<div class="text-container">
 		<span>{firstLine}</span>
 		<span>{secondLine}</span>
