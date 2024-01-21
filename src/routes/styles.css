@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'Fixel';
     font-style: normal;
-    font-weight: 500;
     src: local(''), url('/fonts/FixelVariable.ttf') format('truetype-variations');
 }
 
@@ -16,7 +15,6 @@
 @font-face {
     font-family: 'Fixel Italic';
     font-style: italic;
-    font-weight: 500;
     src: local(''), url('/fonts/FixelItalicVariable.ttf') format('truetype-variations');
 }
 
@@ -66,12 +64,14 @@ a:hover {
 }
 
 h1 {
-	font-size: 2rem;
+	font-size: 3rem;
 	text-align: center;
+	font-variant-alternates: styleset(alternate);
 }
 
 h2 {
-	font-size: 1rem;
+	font-size: 2rem;
+	font-variant-alternates: styleset(alternate);
 }
 
 pre {

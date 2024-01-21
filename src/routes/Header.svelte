@@ -12,8 +12,8 @@
 				<a href="/projects">projects</a>
 			</li>
 		</ul>
-		<div class="bird">J</div>
-		<a class="def4alt" href="/">def4alt</a>
+		<div class="logo">J</div>
+		<a class="brand" href="/">def4alt</a>
 	</nav>
 </header>
 
@@ -27,14 +27,14 @@
 		justify-content: space-around;
 	}
 
-	.bird {
+	.logo {
 		font-variant-alternates: styleset(symbols);
 		user-select: none;
 		color: var(--color-background);
 		font-size: 8rem;
 	}
 
-	.def4alt {
+	.brand {
 		font-variant-numeric: proportional-nums;
 		font-size: 4rem;
 		color: var(--color-background);
