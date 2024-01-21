@@ -1,5 +1,8 @@
 <script lang="ts">
-	export let text: string;
+	import ArrowUp from '../icons/arrowup.svelte';
+
+	export let content: string;
+	export let link: string | undefined = undefined;
 	export let startYear: number | undefined = undefined;
 	export let endYear: number | undefined = undefined;
 	export let inProgress = false;
@@ -7,7 +10,14 @@
 
 <div class="timeline-item">
 	<div class="timeline-item-text">
-		{text}
+		{#if link}
+			<a href={link}>
+				{content}
+				<span class="timeline-item-link-arrow"><ArrowUp /></span>
+			</a>
+		{:else}
+			{content}
+		{/if}
 		{#if startYear}
 			<span class="year-range">
 				{#if startYear && endYear}
@@ -34,6 +44,17 @@
 
 	.timeline-item-text {
 		font-size: 1.5rem;
+
 		font-weight: 300;
+
+		& a {
+			color: inherit;
+		}
+
+		& .timeline-item-link-arrow > * {
+			width: 1.5rem;
+			height: 1.5rem;
+			stroke: var(--color-text);
+		}
 	}
 </style>

@@ -1,6 +1,6 @@
 <script>
 	import andrii from '$lib/images/andrii.png';
-	import linkedin from '$lib/images/linkedin.png';
+	import LinkedIn from '../icons/linkedin.svelte';
 	import Instagram from '../icons/instagram.svelte';
 	import Github from '../icons/github.svelte';
 	import Timeline from '$lib/Timeline.svelte';
@@ -32,34 +32,45 @@
 <div class="personal-info">
 	<p>programmer, student</p>
 	<div class="social-links">
-		<a href="https://linkedin.com/in/def4alt"><img src={linkedin} alt="linkedin" /></a>
+		<a href="https://linkedin.com/in/def4alt"><LinkedIn /></a>
 		<a href="https://instagram.com/def4alt"><Instagram /></a>
 		<a href="https://github.com/def4alt"><Github /></a>
 	</div>
 </div>
 <Timeline title="education">
-	<TimelineItem text="upml" startYear={2018} endYear={2022} />
 	<TimelineItem
-		text="taras shevchenko national university of kyiv"
+		content="upml"
+		link="http://upml.knu.ua/about-upml/"
+		startYear={2018}
+		endYear={2022}
+	/>
+	<TimelineItem
+		content="taras shevchenko national university of kyiv"
+		link="https://knu.ua/en"
 		startYear={2022}
 		endYear={2023}
 	/>
-	<TimelineItem text="studienkolleg münchen" startYear={2023} inProgress={true} />
+	<TimelineItem
+		content="studienkolleg münchen"
+		link="https://xn--studienkolleg-mnchen-3ec.de/"
+		startYear={2023}
+		inProgress={true}
+	/>
 </Timeline>
 <div class="work-hobbies-section">
 	<div>
 		<Timeline title="workplaces">
-			<TimelineItem text="home 🏠" startYear={2004} inProgress={true} />
-			<TimelineItem text="bamberger haus 🍻" startYear={2023} />
-			<TimelineItem text="steinheil 16 💁" startYear={2023} inProgress={true} />
+			<TimelineItem content="home 🏠" startYear={2004} inProgress={true} />
+			<TimelineItem content="bamberger haus 🍻" startYear={2023} />
+			<TimelineItem content="steinheil 16 💁" startYear={2023} inProgress={true} />
 		</Timeline>
 	</div>
 
 	<div>
 		<Timeline title="hobbies">
-			<TimelineItem text="traveling ✈️️" />
-			<TimelineItem text="swimming 🏊" />
-			<TimelineItem text="playing guitar 🎸" />
+			<TimelineItem content="traveling ✈️️" />
+			<TimelineItem content="swimming 🏊" />
+			<TimelineItem content="playing guitar 🎸" />
 		</Timeline>
 	</div>
 </div>
@@ -196,16 +207,6 @@
 				height: 2.5rem;
 				opacity: 90%;
 				transition: transform 0.1s ease-in-out;
-			}
-
-			& img {
-				filter: grayscale(100%) contrast(100%) brightness(0);
-			}
-
-			@media (prefers-color-scheme: dark) {
-				& img {
-					filter: grayscale(100%) contrast(100%) brightness(100%);
-				}
 			}
 
 			& > *:hover {
