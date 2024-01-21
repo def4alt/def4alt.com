@@ -6,10 +6,10 @@
 	<nav>
 		<ul>
 			<li aria-current={$page.url.pathname === '/posts' ? 'page' : undefined}>
-				<a href="/posts">posts</a>
+				<a href="/">posts</a>
 			</li>
 			<li aria-current={$page.url.pathname === '/projects' ? 'page' : undefined}>
-				<a href="/projects">projects</a>
+				<a href="/">projects</a>
 			</li>
 		</ul>
 		<div class="logo">J</div>
