@@ -202,6 +202,12 @@
 				filter: grayscale(100%) contrast(100%) brightness(0);
 			}
 
+			@media (prefers-color-scheme: dark) {
+				& img {
+					filter: grayscale(100%) contrast(100%) brightness(100%);
+				}
+			}
+
 			& > *:hover {
 				opacity: 1;
 				transform: scale(1.1);

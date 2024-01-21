@@ -33,9 +33,13 @@
 
 	footer {
 		display: flex;
+		line-height: 1.5;
+		font-size: 2vw;
+		color: var(--color-text-light);
+		opacity: 20%;
+		margin-right: 10px;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		align-items: end;
 		font-weight: bold;
 	}
 </style>
