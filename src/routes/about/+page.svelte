@@ -5,6 +5,7 @@
 	import Github from '../../icons/github.svelte';
 	import Timeline from '$lib/Timeline.svelte';
 	import TimelineItem from '$lib/TimelineItem.svelte';
+	import MultiLineMarquee from '$lib/MultiLineMarquee.svelte';
 </script>
 
 <svelte:head>
@@ -61,6 +62,26 @@
 			<TimelineItem text="playing guitar 🎸" />
 		</Timeline>
 	</div>
+</div>
+
+<h1>languages</h1>
+<div class="languages">
+	<MultiLineMarquee
+		title="ukrainian"
+		content="Живеш на сьомому поверсі, стіни кімнати завісив козаками й діячами ЗУНР, з вікна бачиш московські дахи, безрадісні тополині алеї, Останкінської телевежі не бачиш — її видно з кімнат, розташованих по другий бік коридору, — але близька її присутність відчувається щохвилини; випромінює щось дуже снодійне, віруси млявості та апатії, тому вранці ніяк не можеш прокинутися, переходиш з одного сновидіння в інше, ніби з країни в країну. Спиш самовіддано, найчастіше до одинадцятої, поки узбек за стіною не увімкне на повний регулятор духмяну орієнтальну музику 'адин палка два струна'. Проклинаючи незлостиво нещасну нашу історію, дружбу народів і союзний договір 22-го року, усвідомлюєш: далі спати не можна."
+	/>
+	<MultiLineMarquee
+		title="english"
+		content="It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him"
+	/>
+	<MultiLineMarquee
+		title="german"
+		content="Ihr naht euch wieder, schwankende Gestalten! Die früh sich einst dem trüben Blick gezeigt. Versuch ich wohl euch diesmal fest zu halten? Fühl ich mein Herz noch jenem Wahn geneigt? Ihr drängt euch zu! nun gut, so mögt ihr walten, 5 Wie ihr aus Dunst und Nebel um mich steigt; Mein Busen fühlt sich jugendlich erschüttert Vom Zauberhauch, der euren Zug umwittert."
+	/>
+	<MultiLineMarquee
+		title="spanish"
+		content="Paracéme, Sancho, que no hay refrán que no sea verdadero, porque todos son sentencias sacadas de la misma experiencia, madre de las ciencias todas."
+	/>
 </div>
 
 <style>
@@ -181,7 +202,7 @@
 				filter: grayscale(100%) contrast(100%) brightness(0);
 			}
 
-			& *:hover {
+			& > *:hover {
 				opacity: 1;
 				transform: scale(1.1);
 			}
@@ -195,5 +216,13 @@
 		& > * {
 			width: 50%;
 		}
+	}
+
+	.languages {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		align-items: center;
+		justify-content: center;
 	}
 </style>

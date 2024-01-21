@@ -121,3 +121,21 @@ button:focus:not(:focus-visible) {
 	width: 1px;
 	white-space: nowrap;
 }
+
+.language-title {
+	opacity: 0;
+	font-size: 3rem;
+	font-variant-alternates: styleset(alternate);
+	margin-left: 2rem;
+	transition: all ease-in 400ms;
+}
+
+.language-hover {
+	& [data-marqueeck-sticky] {
+		opacity: 1;
+	}
+
+	& [data-marqueeck-ribbon] {
+		opacity: 30%;
+	}
+}
