@@ -1,6 +1,5 @@
 <script>
 	import andrii from '$lib/images/andrii.webp';
-	import mountains from '$lib/images/mountains.webp';
 	import LinkedIn from '../icons/linkedin.svelte';
 	import Instagram from '../icons/instagram.svelte';
 	import Github from '../icons/github.svelte';
