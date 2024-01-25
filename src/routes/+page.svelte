@@ -39,7 +39,7 @@
 </div>
 <Timeline title="My alma mater">
 	<TimelineItem
-		content="upml"
+		content="ukrainian physics and mathematics lyceum"
 		link="http://upml.knu.ua/about-upml/"
 		startYear={2018}
 		endYear={2022}
