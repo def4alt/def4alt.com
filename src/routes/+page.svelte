@@ -107,7 +107,11 @@
 		top: 0;
 		left: 0;
 		width: 100vw;
-		height: 100vh;
+		height: 100%;
+		height: -moz-available;
+		height: -webkit-fill-available;
+		height: fill-available;
+		height: stretch;
 		z-index: -1;
 		overflow: hidden;
 		background-color: var(--color-text);
@@ -137,7 +141,7 @@
 		}
 
 		& .video-overlay {
-			height: 30vh;
+			height: 30%;
 			width: 100vw;
 			position: absolute;
 			top: 0;
@@ -188,7 +192,7 @@
 				margin-bottom: 5rem;
 			}
 
-			@media screen and (max-height: 768px) {
+			@media screen and (max-height: 600px) {
 				margin-bottom: 2rem;
 			}
 
