@@ -1,6 +1,6 @@
 <script>
-	import andrii from '$lib/images/andrii.png';
-	import linkedin from '$lib/images/linkedin.png';
+	import andrii from '$lib/images/andrii.webp';
+	import LinkedIn from '../icons/linkedin.svelte';
 	import Instagram from '../icons/instagram.svelte';
 	import Github from '../icons/github.svelte';
 	import Timeline from '$lib/Timeline.svelte';
@@ -32,39 +32,54 @@
 <div class="personal-info">
 	<p>programmer, student</p>
 	<div class="social-links">
-		<a href="https://linkedin.com/in/def4alt"><img src={linkedin} alt="linkedin" /></a>
+		<a href="https://linkedin.com/in/def4alt"><LinkedIn /></a>
 		<a href="https://instagram.com/def4alt"><Instagram /></a>
 		<a href="https://github.com/def4alt"><Github /></a>
 	</div>
 </div>
-<Timeline title="education">
-	<TimelineItem text="upml" startYear={2018} endYear={2022} />
+<Timeline title="My alma mater">
 	<TimelineItem
-		text="taras shevchenko national university of kyiv"
+		content="upml"
+		link="http://upml.knu.ua/about-upml/"
+		startYear={2018}
+		endYear={2022}
+	/>
+	<TimelineItem
+		content="taras shevchenko national university of kyiv"
+		link="https://knu.ua/en"
 		startYear={2022}
 		endYear={2023}
 	/>
-	<TimelineItem text="studienkolleg münchen" startYear={2023} inProgress={true} />
+	<TimelineItem
+		content="studienkolleg münchen"
+		link="https://xn--studienkolleg-mnchen-3ec.de/"
+		startYear={2023}
+		inProgress={true}
+	/>
 </Timeline>
 <div class="work-hobbies-section">
 	<div>
-		<Timeline title="workplaces">
-			<TimelineItem text="home 🏠" startYear={2004} inProgress={true} />
-			<TimelineItem text="bamberger haus 🍻" startYear={2023} />
-			<TimelineItem text="steinheil 16 💁" startYear={2023} inProgress={true} />
+		<Timeline title="I worked at">
+			<TimelineItem content="home 🏠" startYear={2004} inProgress={true} />
+			<TimelineItem
+				content="bamberger haus 🍻"
+				startYear={2023}
+				link="https://www.bambergerhaus.com/"
+			/>
+			<TimelineItem content="steinheil 16 💁" startYear={2023} link="https://www.steinheil16.de" />
 		</Timeline>
 	</div>
 
 	<div>
-		<Timeline title="hobbies">
-			<TimelineItem text="traveling ✈️️" />
-			<TimelineItem text="swimming 🏊" />
-			<TimelineItem text="playing guitar 🎸" />
+		<Timeline title="My hobbies">
+			<TimelineItem content="traveling ✈️️" />
+			<TimelineItem content="swimming 🏊" />
+			<TimelineItem content="playing guitar 🎸" />
 		</Timeline>
 	</div>
 </div>
 
-<h1>languages</h1>
+<h1>I speak</h1>
 <div class="languages">
 	<MultiLineMarquee
 		title="ukrainian"
@@ -98,11 +113,17 @@
 		& video {
 			position: absolute;
 			z-index: -2;
-			top: 0;
-			left: 0;
+			top: 50%;
+			left: 50%;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			overflow: clip;
+			overflow-clip-margin: content-box;
+			display: inline-block;
+			vertical-align: baseline;
+			transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
 		}
 
 		& .video-overlay {
@@ -198,16 +219,6 @@
 				transition: transform 0.1s ease-in-out;
 			}
 
-			& img {
-				filter: grayscale(100%) contrast(100%) brightness(0);
-			}
-
-			@media (prefers-color-scheme: dark) {
-				& img {
-					filter: grayscale(100%) contrast(100%) brightness(100%);
-				}
-			}
-
 			& > *:hover {
 				opacity: 1;
 				transform: scale(1.1);
@@ -225,10 +236,13 @@
 	}
 
 	.languages {
-		display: flex;
-		flex-direction: column;
+		display: grid;
 		gap: 30px;
-		align-items: center;
-		justify-content: center;
+		grid-template-columns: auto auto;
+		grid-template-rows: auto auto;
+
+		& > * {
+			border-radius: 15px;
+		}
 	}
 </style>

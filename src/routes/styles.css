@@ -124,7 +124,7 @@ button:focus:not(:focus-visible) {
 
 .language-title {
 	opacity: 0;
-	font-size: 3rem;
+	font-size: 2rem;
 	font-variant-alternates: styleset(alternate);
 	margin-left: 2rem;
 	transition: all ease-in 400ms;
