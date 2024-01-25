@@ -34,7 +34,7 @@
 	footer {
 		display: flex;
 		line-height: 1.5;
-		font-size: 2vw;
+		font-size: 1.5rem;
 		color: var(--color-text-light);
 		opacity: 20%;
 		margin-right: 10px;

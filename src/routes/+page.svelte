@@ -19,13 +19,13 @@
 </div>
 <div class="profile">
 	<div class="profile-cover">
+		<img src={andrii} alt="Andrii Olkhovych" />
 		<p class="profile-name">Andrii Olkhovych</p>
 		<a
 			class="transcription-link"
 			href="http://ipa-reader.xyz/?text=%C9%91n%CB%88drij%20%C9%94l%CB%88x%C9%94v%C9%AAt%CA%83&voice=Ewa"
 			>/andrij olhovich/</a
 		>
-		<img src={andrii} alt="Andrii Olkhovych" />
 	</div>
 	<div class="profile-bottom-line" />
 </div>
@@ -79,7 +79,7 @@
 	</div>
 </div>
 
-<h1>I speak</h1>
+<h2>I speak</h2>
 <div class="languages">
 	<MultiLineMarquee
 		title="ukrainian"
@@ -138,6 +138,15 @@
 				rgba(0, 0, 0, 0.65) 35%,
 				rgba(0, 0, 0, 0) 100%
 			);
+
+			@media screen and (max-width: 768px) {
+				background: linear-gradient(
+					180deg,
+					rgba(0, 0, 0, 0.86) 0%,
+					rgba(0, 0, 0, 0.65) 55%,
+					rgba(0, 0, 0, 0) 100%
+				);
+			}
 		}
 	}
 
@@ -155,7 +164,23 @@
 
 		& .profile-cover {
 			width: 100%;
-			margin-bottom: 5rem;
+			margin-bottom: 20vh;
+			position: relative;
+
+			@media screen and (max-width: 768px) {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+
+			@media screen and (max-height: 1024px) {
+				margin-bottom: 5rem;
+			}
+
+			@media screen and (max-height: 768px) {
+				margin-bottom: 2rem;
+			}
 
 			& .profile-name {
 				font-size: 8rem;
@@ -165,6 +190,20 @@
 				line-height: 1.1;
 				font-variant-alternates: styleset(alternate);
 				color: var(--color-background);
+
+				@media screen and (max-width: 1024px) {
+					font-size: 6rem;
+				}
+
+				@media screen and (max-width: 768px) {
+					font-size: 3rem;
+					text-align: center;
+					margin-top: 20px;
+				}
+
+				@media screen and (max-width: 425px) {
+					font-size: 2.5rem;
+				}
 			}
 
 			& .transcription-link {
@@ -172,16 +211,39 @@
 				margin: 0;
 				padding: 0;
 				color: var(--color-secondary-light);
+
+				@media screen and (max-width: 425px) {
+					font-size: 1.5rem;
+				}
 			}
 
 			& img {
 				position: absolute;
-				bottom: 6rem;
+				right: 0;
+				bottom: 0;
 				object-fit: contain;
 				width: 40rem;
-				right: auto;
+				max-height: 50vh;
 				border-radius: 15px;
 				z-index: -1;
+
+				@media screen and (max-width: 1024px) {
+					width: 35rem;
+				}
+
+				@media (min-width: 1024px) {
+					max-height: 90vh;
+				}
+
+				@media screen and (max-width: 768px) {
+					position: relative;
+					width: 40%;
+					min-width: 15rem;
+					height: 30rem;
+					max-width: 50%;
+					object-fit: cover;
+					border-radius: 35px;
+				}
 			}
 		}
 
@@ -203,7 +265,11 @@
 		margin-bottom: 50px;
 
 		& p {
-			font-size: 24px;
+			font-size: 1.5em;
+
+			@media screen and (max-width: 768px) {
+				font-size: 2rem;
+			}
 		}
 
 		& .social-links {
@@ -211,13 +277,25 @@
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
-			width: 20rem;
+			gap: 4rem;
+
+			@media screen and (max-width: 768px) {
+				margin-top: 2rem;
+				margin-right: 2rem;
+				gap: 1.5rem;
+				flex-direction: column;
+			}
 
 			& * {
 				width: 2.5rem;
 				height: 2.5rem;
 				opacity: 90%;
 				transition: transform 0.1s ease-in-out;
+
+				@media screen and (max-width: 425px) {
+					width: 2rem;
+					height: 2rem;
+				}
 			}
 
 			& > *:hover {
@@ -233,6 +311,13 @@
 
 		& > * {
 			width: 50%;
+		}
+
+		@media screen and (max-width: 768px) {
+			flex-direction: column;
+			& > * {
+				width: 100%;
+			}
 		}
 	}
 
