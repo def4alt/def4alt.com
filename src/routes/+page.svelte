@@ -210,6 +210,10 @@
 					text-align: center;
 					margin-top: 20px;
 				}
+
+				@media screen and (max-width: 425px) {
+					font-size: 2rem;
+				}
 			}
 
 			& .transcription-link {
