@@ -25,10 +25,6 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-around;
-
-		@media screen and (max-width: 768px) {
-			align-items: end;
-		}
 	}
 
 	.logo {
