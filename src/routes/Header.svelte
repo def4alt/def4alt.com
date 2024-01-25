@@ -25,6 +25,10 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-around;
+
+		@media screen and (max-width: 768px) {
+			align-items: end;
+		}
 	}
 
 	.logo {
@@ -32,6 +36,10 @@
 		user-select: none;
 		color: var(--color-background);
 		font-size: 8rem;
+
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
 	}
 
 	.brand {
@@ -39,6 +47,10 @@
 		font-size: 4rem;
 		color: var(--color-background);
 		font-variant-alternates: styleset(alternate);
+
+		@media screen and (max-width: 768px) {
+			font-size: 3rem;
+		}
 	}
 
 	ul {
@@ -46,6 +58,13 @@
 		flex-direction: row;
 		padding: 0;
 		gap: 30px;
+
+		@media screen and (max-width: 768px) {
+			flex-direction: column;
+			gap: 15px;
+			margin: 0;
+		}
+
 		& li {
 			list-style-type: none;
 			& a {
@@ -54,6 +73,10 @@
 				text-transform: lowercase;
 				font-size: 2rem;
 				font-weight: 400;
+
+				@media screen and (max-width: 768px) {
+					font-size: 1.5rem;
+				}
 			}
 		}
 	}

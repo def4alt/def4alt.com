@@ -128,6 +128,14 @@ button:focus:not(:focus-visible) {
 	font-variant-alternates: styleset(alternate);
 	margin-left: 2rem;
 	transition: all ease-in 400ms;
+
+	@media screen and (max-width: 425px) {
+		margin-left: 0.5rem;
+	}
+}
+
+.language-bordered {
+	border: dashed 3px var(--color-secondary-dark);
 }
 
 .language-hover {

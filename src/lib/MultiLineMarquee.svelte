@@ -3,6 +3,7 @@
 
 	export let title: string;
 	export let content: string;
+	export let bordered = false;
 
 	let halfLength = Math.ceil(content.length / 2);
 	let firstLine = content.substring(0, halfLength);
@@ -15,7 +16,12 @@
 	} as MarqueeckOptions;
 </script>
 
-<Marqueeck {options} hoverClasses="language-hover" stickyClasses="language-title">
+<Marqueeck
+	{options}
+	class={bordered ? 'language-bordered' : ''}
+	hoverClasses="language-hover"
+	stickyClasses="language-title"
+>
 	<div class="text-container">
 		<span>{firstLine}</span>
 		<span>{secondLine}</span>
