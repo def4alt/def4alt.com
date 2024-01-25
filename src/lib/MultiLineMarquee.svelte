@@ -10,7 +10,8 @@
 
 	const options = {
 		direction: 'left',
-		paddingX: 0
+		paddingX: 0,
+		speed: 25
 	} as MarqueeckOptions;
 </script>
 
@@ -26,14 +27,15 @@
 	.text-container {
 		display: flex;
 		width: 100%;
-		height: 5rem;
+		height: 3.5rem;
 		flex-direction: column;
+		user-select: none;
 
 		& > * {
-			height: 2.5rem;
-			font-size: 2rem;
+			height: 2rem;
+			font-size: 1.5rem;
 			color: var(--color-text-light);
-			opacity: 70%;
+			opacity: 60%;
 		}
 	}
 </style>
