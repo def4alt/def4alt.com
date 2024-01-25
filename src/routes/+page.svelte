@@ -93,7 +93,13 @@
 		title="german"
 		content="Ihr naht euch wieder, schwankende Gestalten! Die früh sich einst dem trüben Blick gezeigt. Versuch ich wohl euch diesmal fest zu halten? Fühl ich mein Herz noch jenem Wahn geneigt? Ihr drängt euch zu! nun gut, so mögt ihr walten, 5 Wie ihr aus Dunst und Nebel um mich steigt; Mein Busen fühlt sich jugendlich erschüttert Vom Zauberhauch, der euren Zug umwittert."
 	/>
+	<MultiLineMarquee
+		title="spanish"
+		bordered={true}
+		content="Paracéme, Sancho, que no hay refrán que no sea verdadero, porque todos son sentencias sacadas de la misma experiencia, madre de las ciencias todas."
+	/>
 </div>
+<p class="languages-learning">* in a journey of learning</p>
 
 <style>
 	.video-background {
@@ -326,5 +332,9 @@
 		& > * {
 			border-radius: 15px;
 		}
+	}
+
+	.languages-learning {
+		color: var(--color-secondary-dark);
 	}
 </style>

@@ -134,6 +134,10 @@ button:focus:not(:focus-visible) {
 	}
 }
 
+.language-bordered {
+	border: dashed 3px var(--color-secondary-dark);
+}
+
 .language-hover {
 	& [data-marqueeck-sticky] {
 		opacity: 1;
