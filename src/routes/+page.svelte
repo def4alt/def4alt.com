@@ -1,5 +1,6 @@
 <script>
 	import andrii from '$lib/images/andrii.webp';
+	import mountains from '$lib/images/mountains.webp';
 	import LinkedIn from '../icons/linkedin.svelte';
 	import Instagram from '../icons/instagram.svelte';
 	import Github from '../icons/github.svelte';
@@ -110,7 +111,11 @@
 		height: 100vh;
 		z-index: -1;
 		overflow: hidden;
-		background: var(--color-text);
+		background-color: var(--color-text);
+		background-image: url('https://static.def4alt.com/mountain_range.webp');
+		background-repeat: no-repeat;
+		background-size: auto 100vh;
+		background-position: top;
 
 		& video {
 			position: absolute;
@@ -126,6 +131,10 @@
 			vertical-align: baseline;
 			transform: translate(-50%, -50%);
 			-webkit-transform: translate(-50%, -50%);
+
+			@media screen and (max-width: 425px) {
+				display: none;
+			}
 		}
 
 		& .video-overlay {
@@ -198,13 +207,9 @@
 				}
 
 				@media screen and (max-width: 768px) {
-					font-size: 3rem;
+					font-size: 2.5rem;
 					text-align: center;
 					margin-top: 20px;
-				}
-
-				@media screen and (max-width: 425px) {
-					font-size: 2.5rem;
 				}
 			}
 
@@ -214,7 +219,7 @@
 				padding: 0;
 				color: var(--color-secondary-light);
 
-				@media screen and (max-width: 425px) {
+				@media screen and (max-width: 768px) {
 					font-size: 1.5rem;
 				}
 			}
