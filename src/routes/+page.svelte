@@ -200,6 +200,7 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		margin-bottom: 50px;
 
 		& p {
 			font-size: 24px;
