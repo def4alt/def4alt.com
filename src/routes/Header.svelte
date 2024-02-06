@@ -19,12 +19,14 @@
 
 <style>
 	nav {
-		height: 10rem;
+		height: 150px;
 		width: 100vw;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-around;
+		font-size: calc(1rem + 2vw);
+		line-height: calc(1.4rem + 2.4vw);
 	}
 
 	.logo {
@@ -33,29 +35,27 @@
 		color: var(--color-background);
 		font-size: 8rem;
 
-		@media screen and (max-width: 768px) {
+		@media screen and (orientation: portrait) {
 			display: none;
 		}
 	}
 
 	.brand {
 		font-variant-numeric: proportional-nums;
-		font-size: 4rem;
+		font-size: 2em;
+		line-height: calc(1.4rem + 4.8vw);
 		color: var(--color-background);
 		font-variant-alternates: styleset(alternate);
-
-		@media screen and (max-width: 768px) {
-			font-size: 3rem;
-		}
 	}
 
 	ul {
 		display: flex;
 		flex-direction: row;
 		padding: 0;
+		margin: 0;
 		gap: 30px;
 
-		@media screen and (max-width: 768px) {
+		@media screen and (orientation: portrait) {
 			flex-direction: column;
 			gap: 15px;
 			margin: 0;
@@ -67,12 +67,7 @@
 				color: var(--color-background);
 				font-variant-alternates: styleset(alternate);
 				text-transform: lowercase;
-				font-size: 2rem;
 				font-weight: 400;
-
-				@media screen and (max-width: 768px) {
-					font-size: 1.5rem;
-				}
 			}
 		}
 	}

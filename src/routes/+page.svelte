@@ -19,87 +19,93 @@
 </div>
 <div class="profile">
 	<div class="profile-cover">
+		<div class="profile-name">
+			<p>Andrii<br />Olkhovych</p>
+			<a
+				class="transcription-link"
+				href="http://ipa-reader.xyz/?text=%C9%91n%CB%88drij%20%C9%94l%CB%88x%C9%94v%C9%AAt%CA%83&voice=Ewa"
+				>/andrij olhovich/</a
+			>
+		</div>
 		<img src={andrii} alt="Andrii Olkhovych" />
-		<p class="profile-name">Andrii Olkhovych</p>
-		<a
-			class="transcription-link"
-			href="http://ipa-reader.xyz/?text=%C9%91n%CB%88drij%20%C9%94l%CB%88x%C9%94v%C9%AAt%CA%83&voice=Ewa"
-			>/andrij olhovich/</a
-		>
-	</div>
-	<div class="profile-bottom-line" />
-</div>
-<div class="personal-info">
-	<p>programmer, student</p>
-	<div class="social-links">
-		<a href="https://linkedin.com/in/def4alt"><LinkedIn /></a>
-		<a href="https://instagram.com/def4alt"><Instagram /></a>
-		<a href="https://github.com/def4alt"><Github /></a>
 	</div>
 </div>
-<Timeline title="My alma mater">
-	<TimelineItem
-		content="ukrainian physics and mathematics lyceum"
-		link="http://upml.knu.ua/about-upml/"
-		startYear={2018}
-		endYear={2022}
-	/>
-	<TimelineItem
-		content="taras shevchenko national university of kyiv"
-		link="https://knu.ua/en"
-		startYear={2022}
-		endYear={2023}
-	/>
-	<TimelineItem
-		content="studienkolleg münchen"
-		link="https://xn--studienkolleg-mnchen-3ec.de/"
-		startYear={2023}
-		inProgress={true}
-	/>
-</Timeline>
-<div class="work-hobbies-section">
-	<div>
-		<Timeline title="I worked at">
-			<TimelineItem content="home 🏠" startYear={2004} inProgress={true} />
-			<TimelineItem
-				content="bamberger haus 🍻"
-				startYear={2023}
-				link="https://www.bambergerhaus.com/"
-			/>
-			<TimelineItem content="steinheil 16 💁" startYear={2023} link="https://www.steinheil16.de" />
-		</Timeline>
+<div class="content">
+	<div class="personal-info">
+		<p>programmer, student</p>
+		<div class="social-links">
+			<a href="https://linkedin.com/in/def4alt"><LinkedIn /></a>
+			<a href="https://instagram.com/def4alt"><Instagram /></a>
+			<a href="https://github.com/def4alt"><Github /></a>
+		</div>
+	</div>
+	<Timeline title="My alma mater">
+		<TimelineItem
+			content="ukrainian physics and mathematics lyceum"
+			link="http://upml.knu.ua/about-upml/"
+			startYear={2018}
+			endYear={2022}
+		/>
+		<TimelineItem
+			content="taras shevchenko national university of kyiv"
+			link="https://knu.ua/en"
+			startYear={2022}
+			endYear={2023}
+		/>
+		<TimelineItem
+			content="studienkolleg münchen"
+			link="https://xn--studienkolleg-mnchen-3ec.de/"
+			startYear={2023}
+			inProgress={true}
+		/>
+	</Timeline>
+	<div class="work-hobbies-section">
+		<div>
+			<Timeline title="I worked at">
+				<TimelineItem
+					content="bamberger haus 🍻"
+					startYear={2023}
+					link="https://www.bambergerhaus.com/"
+				/>
+				<TimelineItem
+					content="steinheil 16 💁"
+					startYear={2023}
+					link="https://www.steinheil16.de"
+				/>
+			</Timeline>
+		</div>
+
+		<div>
+			<Timeline title="My hobbies">
+				<TimelineItem content="traveling ✈️️" />
+				<TimelineItem content="swimming 🏊" />
+				<TimelineItem content="playing guitar 🎸" />
+			</Timeline>
+		</div>
 	</div>
 
-	<div>
-		<Timeline title="My hobbies">
-			<TimelineItem content="traveling ✈️️" />
-			<TimelineItem content="swimming 🏊" />
-			<TimelineItem content="playing guitar 🎸" />
-		</Timeline>
+	<h2>I speak</h2>
+	<div class="languages">
+		<MultiLineMarquee
+			title="ukrainian"
+			content="Живеш на сьомому поверсі, стіни кімнати завісив козаками й діячами ЗУНР, з вікна бачиш московські дахи, безрадісні тополині алеї, Останкінської телевежі не бачиш — її видно з кімнат, розташованих по другий бік коридору, — але близька її присутність відчувається щохвилини; випромінює щось дуже снодійне, віруси млявості та апатії, тому вранці ніяк не можеш прокинутися, переходиш з одного сновидіння в інше, ніби з країни в країну. Спиш самовіддано, найчастіше до одинадцятої, поки узбек за стіною не увімкне на повний регулятор духмяну орієнтальну музику 'адин палка два струна'. Проклинаючи незлостиво нещасну нашу історію, дружбу народів і союзний договір 22-го року, усвідомлюєш: далі спати не можна."
+		/>
+		<MultiLineMarquee
+			title="english"
+			content="It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him"
+		/>
+		<MultiLineMarquee
+			title="german"
+			content="Ihr naht euch wieder, schwankende Gestalten! Die früh sich einst dem trüben Blick gezeigt. Versuch ich wohl euch diesmal fest zu halten? Fühl ich mein Herz noch jenem Wahn geneigt? Ihr drängt euch zu! nun gut, so mögt ihr walten, 5 Wie ihr aus Dunst und Nebel um mich steigt; Mein Busen fühlt sich jugendlich erschüttert Vom Zauberhauch, der euren Zug umwittert."
+		/>
+		<MultiLineMarquee
+			title="spanish"
+			bordered={true}
+			content="Paracéme, Sancho, que no hay refrán que no sea verdadero, porque todos son sentencias sacadas de la misma experiencia, madre de las ciencias todas."
+		/>
 	</div>
+	<p class="languages-learning">* in a journey of learning</p>
 </div>
-
-<h2>I speak</h2>
-<div class="languages">
-	<MultiLineMarquee
-		title="ukrainian"
-		content="Живеш на сьомому поверсі, стіни кімнати завісив козаками й діячами ЗУНР, з вікна бачиш московські дахи, безрадісні тополині алеї, Останкінської телевежі не бачиш — її видно з кімнат, розташованих по другий бік коридору, — але близька її присутність відчувається щохвилини; випромінює щось дуже снодійне, віруси млявості та апатії, тому вранці ніяк не можеш прокинутися, переходиш з одного сновидіння в інше, ніби з країни в країну. Спиш самовіддано, найчастіше до одинадцятої, поки узбек за стіною не увімкне на повний регулятор духмяну орієнтальну музику 'адин палка два струна'. Проклинаючи незлостиво нещасну нашу історію, дружбу народів і союзний договір 22-го року, усвідомлюєш: далі спати не можна."
-	/>
-	<MultiLineMarquee
-		title="english"
-		content="It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him"
-	/>
-	<MultiLineMarquee
-		title="german"
-		content="Ihr naht euch wieder, schwankende Gestalten! Die früh sich einst dem trüben Blick gezeigt. Versuch ich wohl euch diesmal fest zu halten? Fühl ich mein Herz noch jenem Wahn geneigt? Ihr drängt euch zu! nun gut, so mögt ihr walten, 5 Wie ihr aus Dunst und Nebel um mich steigt; Mein Busen fühlt sich jugendlich erschüttert Vom Zauberhauch, der euren Zug umwittert."
-	/>
-	<MultiLineMarquee
-		title="spanish"
-		bordered={true}
-		content="Paracéme, Sancho, que no hay refrán que no sea verdadero, porque todos son sentencias sacadas de la misma experiencia, madre de las ciencias todas."
-	/>
-</div>
-<p class="languages-learning">* in a journey of learning</p>
 
 <style>
 	.video-background {
@@ -107,24 +113,18 @@
 		top: 0;
 		left: 0;
 		width: 100vw;
-		height: 100%;
-		height: -moz-available;
-		height: -webkit-fill-available;
-		height: fill-available;
-		height: stretch;
+		height: 90vh;
 		z-index: -1;
 		overflow: hidden;
 		background-color: var(--color-text);
 		background-image: url('https://static.def4alt.com/mountain_range.webp');
 		background-repeat: no-repeat;
-		background-size: auto 100vh;
+		background-size: auto 90vh;
 		background-position: top;
 
 		& video {
 			position: absolute;
 			z-index: -2;
-			top: 50%;
-			left: 50%;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
@@ -132,16 +132,10 @@
 			overflow-clip-margin: content-box;
 			display: inline-block;
 			vertical-align: baseline;
-			transform: translate(-50%, -50%);
-			-webkit-transform: translate(-50%, -50%);
-
-			@media screen and (max-width: 425px) {
-				display: none;
-			}
 		}
 
 		& .video-overlay {
-			height: 30%;
+			height: 30vh;
 			width: 100vw;
 			position: absolute;
 			top: 0;
@@ -153,7 +147,7 @@
 				rgba(0, 0, 0, 0) 100%
 			);
 
-			@media screen and (max-width: 768px) {
+			@media screen and (orientation: portrait) {
 				background: linear-gradient(
 					180deg,
 					rgba(0, 0, 0, 0.86) 0%,
@@ -165,110 +159,84 @@
 	}
 
 	.profile {
-		top: 11rem;
-		left: 0;
 		padding: 0;
+		height: calc(90vh - 150px);
 		width: 100%;
-		height: calc(100vh - 10rem - 1rem);
 		display: flex;
-		flex-direction: column;
-		justify-content: end;
+		justify-content: center;
+		justify-items: center;
 		align-items: center;
-		overflow-x: hidden;
+
+		overflow: hidden;
 
 		& .profile-cover {
-			width: 100%;
-			margin-bottom: 20vh;
-			position: relative;
+			display: flex;
+			justify-content: end;
+			align-items: end;
 
-			@media screen and (max-width: 768px) {
-				display: flex;
-				flex-direction: column;
+			@media screen and (orientation: portrait) {
+				flex-direction: column-reverse;
 				justify-content: center;
 				align-items: center;
 			}
 
-			@media screen and (max-height: 1024px) {
-				margin-bottom: 5rem;
-			}
-
-			@media screen and (max-height: 600px) {
-				margin-bottom: 2rem;
+			@media screen and (max-height: 450px) {
+				margin-top: -50px;
 			}
 
 			& .profile-name {
-				font-size: 8rem;
-				font-weight: 700;
-				width: 40rem;
-				margin: 0;
-				line-height: 1.1;
-				font-variant-alternates: styleset(alternate);
-				color: var(--color-background);
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: start;
+				margin-right: -15vw;
+				z-index: 3;
+				font-size: calc(1rem + 5vw);
 
-				@media screen and (max-width: 1024px) {
-					font-size: 6rem;
-				}
-
-				@media screen and (max-width: 768px) {
-					font-size: 2.5rem;
+				@media screen and (orientation: portrait) {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					margin-right: 0;
 					text-align: center;
 					margin-top: 20px;
 				}
 
-				@media screen and (max-width: 425px) {
-					font-size: 2rem;
+				@media screen and (min-width: 1440px) {
+					margin-right: 0;
 				}
-			}
 
-			& .transcription-link {
-				font-size: 3rem;
-				margin: 0;
-				padding: 0;
-				color: var(--color-secondary-light);
+				& p {
+					font-weight: 700;
+					margin: 0;
+					line-height: 1.1;
+					font-variant-alternates: styleset(alternate);
+					color: var(--color-background);
+				}
 
-				@media screen and (max-width: 768px) {
-					font-size: 1.5rem;
+				& .transcription-link {
+					font-size: 0.5em;
+					color: var(--color-secondary-light);
 				}
 			}
 
 			& img {
-				position: absolute;
-				right: 0;
-				bottom: 0;
+				position: relative;
 				object-fit: contain;
-				width: 40rem;
-				max-height: 50vh;
+				width: auto;
+				height: auto;
 				border-radius: 15px;
-				z-index: -1;
+				max-height: 60vh;
 
-				@media screen and (max-width: 1024px) {
-					width: 35rem;
-				}
-
-				@media (min-width: 1024px) {
-					max-height: 90vh;
-				}
-
-				@media screen and (max-width: 768px) {
-					position: relative;
-					width: 40%;
-					min-width: 15rem;
-					height: 30rem;
-					max-width: 50%;
+				@media screen and (orientation: portrait) {
+					width: 80%;
+					max-height: 40vh;
+					min-width: 200px;
+					height: 500px;
 					object-fit: cover;
 					border-radius: 35px;
 				}
 			}
-		}
-
-		& .profile-bottom-line {
-			width: 5rem;
-			height: 0px;
-			border: solid;
-			border-width: 3px;
-			border-color: var(--color-primary);
-			border-radius: 15px;
-			margin-bottom: 10px;
 		}
 	}
 
@@ -279,9 +247,9 @@
 		margin-bottom: 50px;
 
 		& p {
-			font-size: 1.5em;
+			font-size: 1.5rem;
 
-			@media screen and (max-width: 768px) {
+			@media screen and (orientation: portrait) {
 				font-size: 2rem;
 			}
 		}
@@ -291,24 +259,24 @@
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
-			gap: 4rem;
+			gap: 50px;
 
 			@media screen and (max-width: 768px) {
-				margin-top: 2rem;
-				margin-right: 2rem;
-				gap: 1.5rem;
+				margin-top: 30px;
+				margin-right: 30px;
+				gap: 25px;
 				flex-direction: column;
 			}
 
 			& * {
-				width: 2.5rem;
-				height: 2.5rem;
+				width: 40px;
+				height: 40px;
 				opacity: 90%;
 				transition: transform 0.1s ease-in-out;
 
 				@media screen and (max-width: 425px) {
-					width: 2rem;
-					height: 2rem;
+					width: 30px;
+					height: 30px;
 				}
 			}
 
@@ -336,6 +304,7 @@
 	}
 
 	.languages {
+		width: 100%;
 		display: grid;
 		gap: 30px;
 		grid-template-columns: auto auto;
@@ -343,6 +312,7 @@
 
 		& > * {
 			border-radius: 15px;
+			box-sizing: border-box;
 		}
 	}
 

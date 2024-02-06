@@ -32,7 +32,6 @@
 <style>
 	.text-container {
 		display: flex;
-		width: 100%;
 		height: 3.5rem;
 		flex-direction: column;
 		user-select: none;
