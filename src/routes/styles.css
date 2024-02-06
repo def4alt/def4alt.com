@@ -147,3 +147,12 @@ button:focus:not(:focus-visible) {
 		opacity: 30%;
 	}
 }
+
+.content {
+	display: flex;
+	flex-direction: column;
+	max-width: 56rem;
+	width: 100%;
+	padding: 1rem;
+	margin: 0 auto;
+}
