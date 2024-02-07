@@ -18,8 +18,13 @@
 </header>
 
 <style>
+	header {
+		position: absolute;
+		z-index: 100;
+	}
+
 	nav {
-		height: 150px;
+		height: var(--navbar-height);
 		width: 100vw;
 		display: flex;
 		flex-direction: row;
