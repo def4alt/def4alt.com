@@ -23,6 +23,7 @@
 		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	--color-text: hsl(28, 76%, 7%);
 	--color-text-light: hsl(28, 26%, 27%);
+	--color-text-lighter: hsl(28, 26%, 67%);
 	--color-background: hsl(30, 71%, 97%);
 	--color-accent: hsl(30, 81%, 48%);
 	--color-accent-dark: hsl(30, 81%, 43%);
@@ -30,10 +31,17 @@
 	--color-secondary: hsl(86, 75%, 73%);
 	--color-secondary-light: hsl(86, 75%, 88%);
 	--color-secondary-dark: hsl(86, 75%, 43%);
-	--column-width: 42rem;
-	--column-margin-top: 4rem;
+	--navbar-height: 150px;
+	--padding: 32px;
+	--page-padding-left: max(env(safe-indent-left), var(--padding));
+	--page-padding-right: max(env(safe-indent-right), var(--padding));
 	font-family: var(--font-body);
 	color: var(--color-text);
+}
+
+*, ::before, ::after {
+	box-sizing: border-box;
+	margin: 0;
 }
 
 body {
@@ -71,6 +79,7 @@ h1 {
 
 h2 {
 	font-size: 2rem;
+	margin-bottom: 20px;
 	font-variant-alternates: styleset(alternate);
 }
 
@@ -129,13 +138,14 @@ button:focus:not(:focus-visible) {
 	margin-left: 2rem;
 	transition: all ease-in 400ms;
 
-	@media screen and (max-width: 425px) {
-		margin-left: 0.5rem;
+	@media screen and (max-width: 270px) {
+		margin-left: 0;
 	}
 }
 
 .language-bordered {
-	border: dashed 3px var(--color-secondary-dark);
+	opacity: 50%;
+	border: dashed 3px var(--color-text-lighter);
 }
 
 .language-hover {

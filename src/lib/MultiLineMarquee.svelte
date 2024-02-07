@@ -18,7 +18,7 @@
 
 <Marqueeck
 	{options}
-	class={bordered ? 'language-bordered' : ''}
+	class={bordered ? 'language-bordered language' : 'language'}
 	hoverClasses="language-hover"
 	stickyClasses="language-title"
 >

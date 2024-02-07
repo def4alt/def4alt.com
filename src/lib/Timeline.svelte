@@ -3,9 +3,7 @@
 </script>
 
 <div class="timeline">
-	<div class="timeline-header">
-		<h2>{title}</h2>
-	</div>
+	<h2>{title}</h2>
 	<div class="timeline-items">
 		<slot />
 	</div>
@@ -14,11 +12,6 @@
 <style>
 	.timeline {
 		position: relative;
-		margin-bottom: 40px;
-	}
-
-	.timeline-header {
-		margin-bottom: 20px;
 	}
 
 	.timeline-items {

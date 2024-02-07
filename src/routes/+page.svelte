@@ -17,7 +17,7 @@
 	<video src="https://static.def4alt.com/mountain_range.webm" loop muted autoplay playsinline />
 	<div class="video-overlay" />
 </div>
-<div class="profile">
+<section class="profile">
 	<div class="profile-cover">
 		<div class="profile-name">
 			<p>Andrii<br />Olkhovych</p>
@@ -29,16 +29,16 @@
 		</div>
 		<img src={andrii} alt="Andrii Olkhovych" />
 	</div>
-</div>
-<div class="content">
-	<div class="personal-info">
+</section>
+<section class="content">
+	<aside class="personal-info">
 		<p>programmer, student</p>
-		<div class="social-links">
+		<ul class="social-links">
 			<a href="https://linkedin.com/in/def4alt"><LinkedIn /></a>
 			<a href="https://instagram.com/def4alt"><Instagram /></a>
 			<a href="https://github.com/def4alt"><Github /></a>
-		</div>
-	</div>
+		</ul>
+	</aside>
 	<Timeline title="My alma mater">
 		<TimelineItem
 			content="ukrainian physics and mathematics lyceum"
@@ -70,6 +70,7 @@
 				<TimelineItem
 					content="steinheil 16 💁"
 					startYear={2023}
+					endYear={2024}
 					link="https://www.steinheil16.de"
 				/>
 			</Timeline>
@@ -84,28 +85,29 @@
 		</div>
 	</div>
 
-	<h2>I speak</h2>
-	<div class="languages">
-		<MultiLineMarquee
-			title="ukrainian"
-			content="Живеш на сьомому поверсі, стіни кімнати завісив козаками й діячами ЗУНР, з вікна бачиш московські дахи, безрадісні тополині алеї, Останкінської телевежі не бачиш — її видно з кімнат, розташованих по другий бік коридору, — але близька її присутність відчувається щохвилини; випромінює щось дуже снодійне, віруси млявості та апатії, тому вранці ніяк не можеш прокинутися, переходиш з одного сновидіння в інше, ніби з країни в країну. Спиш самовіддано, найчастіше до одинадцятої, поки узбек за стіною не увімкне на повний регулятор духмяну орієнтальну музику 'адин палка два струна'. Проклинаючи незлостиво нещасну нашу історію, дружбу народів і союзний договір 22-го року, усвідомлюєш: далі спати не можна."
-		/>
-		<MultiLineMarquee
-			title="english"
-			content="It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him"
-		/>
-		<MultiLineMarquee
-			title="german"
-			content="Ihr naht euch wieder, schwankende Gestalten! Die früh sich einst dem trüben Blick gezeigt. Versuch ich wohl euch diesmal fest zu halten? Fühl ich mein Herz noch jenem Wahn geneigt? Ihr drängt euch zu! nun gut, so mögt ihr walten, 5 Wie ihr aus Dunst und Nebel um mich steigt; Mein Busen fühlt sich jugendlich erschüttert Vom Zauberhauch, der euren Zug umwittert."
-		/>
-		<MultiLineMarquee
-			title="spanish"
-			bordered={true}
-			content="Paracéme, Sancho, que no hay refrán que no sea verdadero, porque todos son sentencias sacadas de la misma experiencia, madre de las ciencias todas."
-		/>
-	</div>
-	<p class="languages-learning">* in a journey of learning</p>
-</div>
+	<section>
+		<h2>I speak</h2>
+		<div class="languages">
+			<MultiLineMarquee
+				title="ukrainian"
+				content="Живеш на сьомому поверсі, стіни кімнати завісив козаками й діячами ЗУНР, з вікна бачиш московські дахи, безрадісні тополині алеї, Останкінської телевежі не бачиш — її видно з кімнат, розташованих по другий бік коридору, — але близька її присутність відчувається щохвилини; випромінює щось дуже снодійне, віруси млявості та апатії, тому вранці ніяк не можеш прокинутися, переходиш з одного сновидіння в інше, ніби з країни в країну. Спиш самовіддано, найчастіше до одинадцятої, поки узбек за стіною не увімкне на повний регулятор духмяну орієнтальну музику 'адин палка два струна'. Проклинаючи незлостиво нещасну нашу історію, дружбу народів і союзний договір 22-го року, усвідомлюєш: далі спати не можна."
+			/>
+			<MultiLineMarquee
+				title="english"
+				content="It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him"
+			/>
+			<MultiLineMarquee
+				title="german"
+				content="Ihr naht euch wieder, schwankende Gestalten! Die früh sich einst dem trüben Blick gezeigt. Versuch ich wohl euch diesmal fest zu halten? Fühl ich mein Herz noch jenem Wahn geneigt? Ihr drängt euch zu! nun gut, so mögt ihr walten, 5 Wie ihr aus Dunst und Nebel um mich steigt; Mein Busen fühlt sich jugendlich erschüttert Vom Zauberhauch, der euren Zug umwittert."
+			/>
+			<MultiLineMarquee
+				title="🚧 spanish 🚧"
+				bordered={true}
+				content="Paracéme, Sancho, que no hay refrán que no sea verdadero, porque todos son sentencias sacadas de la misma experiencia, madre de las ciencias todas."
+			/>
+		</div>
+	</section>
+</section>
 
 <style>
 	.video-background {
@@ -113,13 +115,14 @@
 		top: 0;
 		left: 0;
 		width: 100vw;
-		height: 90vh;
+		height: 100vh;
+		min-height: 350px;
 		z-index: -1;
 		overflow: hidden;
 		background-color: var(--color-text);
 		background-image: url('https://static.def4alt.com/mountain_range.webp');
 		background-repeat: no-repeat;
-		background-size: auto 90vh;
+		background-size: auto 100vh;
 		background-position: top;
 
 		& video {
@@ -136,6 +139,7 @@
 
 		& .video-overlay {
 			height: 30vh;
+			min-height: 170px;
 			width: 100vw;
 			position: absolute;
 			top: 0;
@@ -159,8 +163,10 @@
 	}
 
 	.profile {
-		padding: 0;
-		height: calc(90vh - 150px);
+		padding-top: var(--navbar-height);
+		padding-bottom: 20px;
+		height: 100vh;
+		min-height: 350px;
 		width: 100%;
 		display: flex;
 		justify-content: center;
@@ -227,6 +233,8 @@
 				height: auto;
 				border-radius: 15px;
 				max-height: 60vh;
+				min-width: 300px;
+				min-height: 250px;
 
 				@media screen and (orientation: portrait) {
 					width: 80%;
@@ -240,11 +248,15 @@
 		}
 	}
 
+	.content {
+		gap: 50px;
+	}
+
 	.personal-info {
 		display: flex;
 		flex-direction: row;
+		gap: 20px;
 		justify-content: space-between;
-		margin-bottom: 50px;
 
 		& p {
 			font-size: 1.5rem;
@@ -256,14 +268,13 @@
 
 		& .social-links {
 			display: flex;
+			padding: 0;
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
 			gap: 50px;
 
 			@media screen and (max-width: 768px) {
-				margin-top: 30px;
-				margin-right: 30px;
 				gap: 25px;
 				flex-direction: column;
 			}
@@ -296,6 +307,7 @@
 		}
 
 		@media screen and (max-width: 768px) {
+			gap: 50px;
 			flex-direction: column;
 			& > * {
 				width: 100%;
@@ -305,18 +317,11 @@
 
 	.languages {
 		width: 100%;
-		display: grid;
+		display: flex;
+		flex-direction: column;
 		gap: 30px;
-		grid-template-columns: auto auto;
-		grid-template-rows: auto auto;
-
 		& > * {
 			border-radius: 15px;
-			box-sizing: border-box;
 		}
-	}
-
-	.languages-learning {
-		color: var(--color-secondary-dark);
 	}
 </style>
