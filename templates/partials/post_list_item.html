@@ -2,8 +2,11 @@
 <article>
   <header>
     <h2><a href="/posts/{{.Slug}}">{{.Title}}</a></h2>
-    {{if .Description}}<p>{{.Description}}</p>{{end}}
+    {{if .Description}}
+      <p>{{.Description}}</p>
+    {{end}}
   </header>
+
   {{template "post_tags" .}}
 </article>
 {{end}}

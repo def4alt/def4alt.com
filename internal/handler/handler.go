@@ -32,13 +32,11 @@ func New(r *render.Renderer, blog *content.Blog) *Handler {
 }
 
 func (h *Handler) HandleIndex(w http.ResponseWriter, r *http.Request) {
-	if err := h.render.Page(w, "index", ViewData{
+	h.renderPage(w, "index", ViewData{
 		Description: "A small Go + HTMX blog",
 		Tags:        h.blog.Tags(),
 		Posts:       h.blog.Posts(),
-	}); err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-	}
+	})
 }
 
 func (h *Handler) HandleSearch(w http.ResponseWriter, r *http.Request) {
@@ -46,35 +44,27 @@ func (h *Handler) HandleSearch(w http.ResponseWriter, r *http.Request) {
 	tag := r.URL.Query().Get("tag")
 	posts := h.blog.Search(query, tag)
 
-	data := ViewData{
+	h.renderPage(w, "index", ViewData{
 		Title:       "Search",
 		Description: "Search results",
 		Query:       query,
 		Tag:         tag,
 		Tags:        h.blog.Tags(),
 		Posts:       posts,
-	}
-
-	if err := h.render.Page(w, "index", data); err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-	}
+	})
 }
 
 func (h *Handler) HandleTag(w http.ResponseWriter, r *http.Request) {
 	tag := strings.ToLower(strings.TrimSpace(r.PathValue("tag")))
 	posts := h.blog.Search("", tag)
 
-	data := ViewData{
+	h.renderPage(w, "tag", ViewData{
 		Title:       fmt.Sprintf("Tag: %s", tag),
 		Description: fmt.Sprintf("Posts tagged %s", tag),
 		Tag:         tag,
 		Tags:        h.blog.Tags(),
 		Posts:       posts,
-	}
-
-	if err := h.render.Page(w, "tag", data); err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-	}
+	})
 }
 
 func (h *Handler) HandlePost(w http.ResponseWriter, r *http.Request) {
@@ -85,14 +75,12 @@ func (h *Handler) HandlePost(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if err := h.render.Page(w, "post", ViewData{
+	h.renderPage(w, "post", ViewData{
 		Title:       post.Title,
 		Description: post.Description,
 		Tags:        h.blog.Tags(),
 		Post:        post,
-	}); err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-	}
+	})
 }
 
 func (h *Handler) HandleRSS(w http.ResponseWriter, r *http.Request) {
@@ -124,6 +112,12 @@ func (h *Handler) HandleRSS(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/rss+xml; charset=utf-8")
 	w.WriteHeader(http.StatusOK)
 	_ = xml.NewEncoder(w).Encode(feed)
+}
+
+func (h *Handler) renderPage(w http.ResponseWriter, name string, data any) {
+	if err := h.render.Page(w, name, data); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
 }
 
 type rssFeed struct {

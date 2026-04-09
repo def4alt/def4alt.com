@@ -7,14 +7,16 @@
 {{template "search_bar" .}}
 
 {{if .Tags}}
-<nav aria-label="Tags">
-  <p>Tags:</p>
-  <ul>
-    {{range .Tags}}
-      <li><a href="/search?tag={{.}}&q={{$.Query}}">{{.}}</a></li>
-    {{end}}
-  </ul>
-</nav>
+  <nav aria-label="Tags">
+    <p>Tags:</p>
+    <ul>
+      {{range .Tags}}
+        <li>
+          <a href="/search?tag={{.}}&q={{$.Query}}">{{.}}</a>
+        </li>
+      {{end}}
+    </ul>
+  </nav>
 {{end}}
 
 {{template "post_list" .}}

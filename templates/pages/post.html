@@ -1,13 +1,18 @@
 {{define "content"}}
 <article>
   <p><a href="/">← Back</a></p>
+
   <header>
     <h1>{{.Post.Title}}</h1>
-    {{if .Post.Description}}<p>{{.Post.Description}}</p>{{end}}
+    {{if .Post.Description}}
+      <p>{{.Post.Description}}</p>
+    {{end}}
   </header>
+
   <div>
     {{.Post.HTML}}
   </div>
+
   {{template "post_tags" .Post}}
 </article>
 {{end}}
