@@ -1,0 +1,6 @@
+.git
+.gitignore
+.direnv
+.envrc
+.DS_Store
+test_embed

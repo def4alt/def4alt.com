@@ -31,6 +31,11 @@ func New(r *render.Renderer, blog *content.Blog) *Handler {
 	return &Handler{render: r, blog: blog}
 }
 
+func (h *Handler) HandleHealthz(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "text/plain; charset=utf-8")
+	_, _ = w.Write([]byte("ok"))
+}
+
 func (h *Handler) HandleIndex(w http.ResponseWriter, r *http.Request) {
 	h.renderPage(w, "index", ViewData{
 		Description: "A small Go + HTMX blog",

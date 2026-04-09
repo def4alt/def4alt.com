@@ -13,6 +13,24 @@ import (
 	"def4alt/def4alt.com/internal/render"
 )
 
+func TestHealthzReturnsOk(t *testing.T) {
+	t.Parallel()
+
+	app := newTestApp(t)
+
+	req := httptest.NewRequest(http.MethodGet, "/healthz", nil)
+	rr := httptest.NewRecorder()
+
+	app.Routes().ServeHTTP(rr, req)
+
+	if rr.Code != http.StatusOK {
+		t.Fatalf("expected 200, got %d", rr.Code)
+	}
+	if body := rr.Body.String(); body != "ok" {
+		t.Fatalf("expected body ok, got %q", body)
+	}
+}
+
 func TestSearchReturnsFullPageForHTMXRequests(t *testing.T) {
 	t.Parallel()
 
