@@ -474,13 +474,16 @@ body.site {
   }
 
   .post-header {
-    grid-template-columns: 1fr;
-    justify-items: start;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 10px;
   }
 
-  .post-header__date,
+  .post-header__date {
+    white-space: nowrap;
+  }
+
   .post-header .tag-list {
-    justify-self: start;
+    justify-self: end;
   }
 }
 
