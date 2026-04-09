@@ -1,5 +1,5 @@
 {{define "search_bar"}}
-<form role="search">
+<form role="search" action="/search" method="get">
   <label for="q">Search</label>
   <input
     id="q"
@@ -10,6 +10,7 @@
     hx-get="/search"
     hx-trigger="keyup changed delay:300ms"
     hx-target="#results"
+    hx-select="#results"
     hx-push-url="true"
     hx-include="#selected-tag"
   >

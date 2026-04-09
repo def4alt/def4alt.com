@@ -11,7 +11,7 @@
   <p>Tags:</p>
   <ul>
     {{range .Tags}}
-      <li><a href="/search?tag={{.}}&q={{$.Query}}" hx-get="/search?tag={{.}}&q={{$.Query}}" hx-target="#results" hx-push-url="true">{{.}}</a></li>
+      <li><a href="/search?tag={{.}}&q={{$.Query}}">{{.}}</a></li>
     {{end}}
   </ul>
 </nav>

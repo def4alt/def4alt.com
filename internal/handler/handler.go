@@ -32,11 +32,13 @@ func New(r *render.Renderer, blog *content.Blog) *Handler {
 }
 
 func (h *Handler) HandleIndex(w http.ResponseWriter, r *http.Request) {
-	_ = h.render.Page(w, "index", ViewData{
+	if err := h.render.Page(w, "index", ViewData{
 		Description: "A small Go + HTMX blog",
 		Tags:        h.blog.Tags(),
 		Posts:       h.blog.Posts(),
-	})
+	}); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
 }
 
 func (h *Handler) HandleSearch(w http.ResponseWriter, r *http.Request) {
@@ -53,12 +55,9 @@ func (h *Handler) HandleSearch(w http.ResponseWriter, r *http.Request) {
 		Posts:       posts,
 	}
 
-	if isHTMX(r) {
-		_ = h.render.Fragment(w, "post_list", data)
-		return
+	if err := h.render.Page(w, "index", data); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
-
-	_ = h.render.Page(w, "index", data)
 }
 
 func (h *Handler) HandleTag(w http.ResponseWriter, r *http.Request) {
@@ -73,12 +72,9 @@ func (h *Handler) HandleTag(w http.ResponseWriter, r *http.Request) {
 		Posts:       posts,
 	}
 
-	if isHTMX(r) {
-		_ = h.render.Fragment(w, "post_list", data)
-		return
+	if err := h.render.Page(w, "tag", data); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
-
-	_ = h.render.Page(w, "tag", data)
 }
 
 func (h *Handler) HandlePost(w http.ResponseWriter, r *http.Request) {
@@ -89,12 +85,14 @@ func (h *Handler) HandlePost(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	_ = h.render.Page(w, "post", ViewData{
+	if err := h.render.Page(w, "post", ViewData{
 		Title:       post.Title,
 		Description: post.Description,
 		Tags:        h.blog.Tags(),
 		Post:        post,
-	})
+	}); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
 }
 
 func (h *Handler) HandleRSS(w http.ResponseWriter, r *http.Request) {
@@ -146,8 +144,4 @@ type rssItem struct {
 	Link        string `xml:"link"`
 	Description string `xml:"description"`
 	PubDate     string `xml:"pubDate"`
-}
-
-func isHTMX(r *http.Request) bool {
-	return strings.EqualFold(r.Header.Get("HX-Request"), "true")
 }

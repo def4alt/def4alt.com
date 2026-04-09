@@ -13,7 +13,7 @@ import (
 	"def4alt/def4alt.com/internal/render"
 )
 
-func TestSearchReturnsMatchingPostsAsFragment(t *testing.T) {
+func TestSearchReturnsFullPageForHTMXRequests(t *testing.T) {
 	t.Parallel()
 
 	app := newTestApp(t)
@@ -28,6 +28,9 @@ func TestSearchReturnsMatchingPostsAsFragment(t *testing.T) {
 		t.Fatalf("expected 200, got %d", rr.Code)
 	}
 	body := rr.Body.String()
+	if !strings.Contains(body, "<!doctype html>") {
+		t.Fatalf("expected full page shell, got %s", body)
+	}
 	if !strings.Contains(body, "Go Tips") {
 		t.Fatalf("expected go result, got %s", body)
 	}
