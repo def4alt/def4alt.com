@@ -1,0 +1,21 @@
+{{define "content"}}
+<header>
+  <h1>Blog</h1>
+  <p>A small Go + HTMX blog.</p>
+</header>
+
+{{template "search_bar" .}}
+
+{{if .Tags}}
+<nav aria-label="Tags">
+  <p>Tags:</p>
+  <ul>
+    {{range .Tags}}
+      <li><a href="/search?tag={{.}}&q={{$.Query}}" hx-get="/search?tag={{.}}&q={{$.Query}}" hx-target="#results" hx-push-url="true">{{.}}</a></li>
+    {{end}}
+  </ul>
+</nav>
+{{end}}
+
+{{template "post_list" .}}
+{{end}}

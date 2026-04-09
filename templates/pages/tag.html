@@ -1,0 +1,9 @@
+{{define "content"}}
+<header>
+  <p><a href="/">← Back</a></p>
+  <h1>Tag: {{.Tag}}</h1>
+</header>
+
+{{template "search_bar" .}}
+{{template "post_list" .}}
+{{end}}

@@ -1,0 +1,9 @@
+{{define "post_tags"}}
+{{if .Tags}}
+<ul>
+  {{range .Tags}}
+    <li><a href="/search?tag={{.}}">{{.}}</a></li>
+  {{end}}
+</ul>
+{{end}}
+{{end}}

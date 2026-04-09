@@ -1,0 +1,18 @@
+{{define "search_bar"}}
+<form role="search">
+  <label for="q">Search</label>
+  <input
+    id="q"
+    type="search"
+    name="q"
+    value="{{.Query}}"
+    placeholder="Search posts"
+    hx-get="/search"
+    hx-trigger="keyup changed delay:300ms"
+    hx-target="#results"
+    hx-push-url="true"
+    hx-include="#selected-tag"
+  >
+  <input id="selected-tag" type="hidden" name="tag" value="{{.Tag}}">
+</form>
+{{end}}

@@ -1,0 +1,17 @@
+{{define "base"}}<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{if .Title}}{{.Title}} · Blog{{else}}Blog{{end}}</title>
+    {{if .Description}}<meta name="description" content="{{.Description}}">{{end}}
+    <link rel="alternate" type="application/rss+xml" title="Blog RSS" href="/rss.xml">
+    <script src="https://unpkg.com/htmx.org@2.0.7"></script>
+    <link rel="stylesheet" href="/static/app.css">
+  </head>
+  <body>
+    <main>
+      {{template "content" .}}
+    </main>
+  </body>
+</html>{{end}}
