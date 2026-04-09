@@ -1,6 +1,8 @@
+// Package main starts the blog server.
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 	"strings"
@@ -12,14 +14,21 @@ import (
 )
 
 func main() {
+	if err := run(); err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
+	}
+}
+
+func run() error {
 	blog, err := content.Load("content")
 	if err != nil {
-		log.Fatalf("failed to load content: %v", err)
+		return fmt.Errorf("load content: %w", err)
 	}
 
 	r, err := render.New(".")
 	if err != nil {
-		log.Fatalf("failed to load templates: %v", err)
+		return fmt.Errorf("load templates: %w", err)
 	}
 
 	addr := os.Getenv("PORT")
@@ -34,6 +43,7 @@ func main() {
 
 	log.Printf("Starting server on %s", addr)
 	if err := s.Start(); err != nil {
-		log.Fatalf("Server failed to start: %v", err)
+		return fmt.Errorf("server failed: %w", err)
 	}
+	return nil
 }
