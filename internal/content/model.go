@@ -14,6 +14,8 @@ type Post struct {
 	Description string
 	Tags        []string
 	Draft       bool
+	Image       string
+	ImageAlt    string
 	Body        string
 	HTML        template.HTML
 	SearchText  string

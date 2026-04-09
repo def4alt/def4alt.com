@@ -1,0 +1,23 @@
+{{define "content"}}
+<article class="post-layout">
+  <header class="post-header">
+    <a class="back-link" href="/">← Back</a>
+    <p class="post-header__date">{{.Post.Date.Format "Jan 2, 2006"}}</p>
+    {{template "post_tags" .Post}}
+  </header>
+
+  <section class="post-hero">
+    <figure class="post-hero__media">
+      {{if .Post.Image}}
+        <img class="post-hero__image" src="{{.Post.Image}}" alt="{{if .Post.ImageAlt}}{{.Post.ImageAlt}}{{else}}{{.Post.Title}}{{end}}">
+      {{else}}
+        <div class="post-hero__fallback" aria-hidden="true"></div>
+      {{end}}
+    </figure>
+  </section>
+
+  <div class="post-content">
+    {{.Post.HTML}}
+  </div>
+</article>
+{{end}}

@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/yuin/goldmark"
+	"github.com/yuin/goldmark/extension"
 )
 
 type frontMatter struct {
@@ -20,6 +21,8 @@ type frontMatter struct {
 	Description string
 	Tags        []string
 	Draft       bool
+	Image       string
+	ImageAlt    string
 }
 
 func Load(root string) (*Blog, error) {
@@ -80,7 +83,7 @@ func parsePost(path string) (Post, error) {
 	}
 
 	var html bytes.Buffer
-	if err := goldmark.Convert([]byte(body), &html); err != nil {
+	if err := goldmark.New(goldmark.WithExtensions(extension.GFM)).Convert([]byte(body), &html); err != nil {
 		return Post{}, fmt.Errorf("%s: %w", path, err)
 	}
 
@@ -98,6 +101,8 @@ func parsePost(path string) (Post, error) {
 		Description: meta.Description,
 		Tags:        meta.Tags,
 		Draft:       meta.Draft,
+		Image:       meta.Image,
+		ImageAlt:    meta.ImageAlt,
 		Body:        body,
 		HTML:        template.HTML(html.String()),
 		SearchText:  searchText,
@@ -168,6 +173,10 @@ func parseFrontMatter(input string) (frontMatter, error) {
 			meta.Tags = parseTags(value)
 		case "draft":
 			meta.Draft = strings.EqualFold(value, "true")
+		case "image":
+			meta.Image = value
+		case "image_alt", "imagealt":
+			meta.ImageAlt = value
 		}
 	}
 

@@ -81,6 +81,44 @@ Hidden body.
 	}
 }
 
+func TestLoadPostsParsesOptionalImageField(t *testing.T) {
+	t.Parallel()
+
+	root := t.TempDir()
+	postsDir := filepath.Join(root, "posts")
+	if err := os.MkdirAll(postsDir, 0o755); err != nil {
+		t.Fatalf("mkdir: %v", err)
+	}
+
+	mustWrite(t, filepath.Join(postsDir, "image.md"), `---
+title: Image Post
+slug: image-post
+date: 2024-04-01
+description: post with images
+tags: visual
+image: /content/images/gallery-1.webp
+image_alt: A colorful browser gallery scene
+---
+Body.
+`)
+
+	blog, err := content.Load(root)
+	if err != nil {
+		t.Fatalf("load: %v", err)
+	}
+
+	post, ok := blog.BySlug("image-post")
+	if !ok {
+		t.Fatalf("expected post by slug")
+	}
+	if post.Image != "/content/images/gallery-1.webp" {
+		t.Fatalf("expected image field, got %q", post.Image)
+	}
+	if post.ImageAlt != "A colorful browser gallery scene" {
+		t.Fatalf("expected image alt, got %q", post.ImageAlt)
+	}
+}
+
 func TestSearchFiltersByQueryAndTag(t *testing.T) {
 	t.Parallel()
 
@@ -90,21 +128,21 @@ func TestSearchFiltersByQueryAndTag(t *testing.T) {
 		t.Fatalf("mkdir: %v", err)
 	}
 
-	mustWrite(t, filepath.Join(postsDir, "go.md"), `---
-title: Go Tips
-slug: go-tips
+	mustWrite(t, filepath.Join(postsDir, "alpha.md"), `---
+title: Alpha Post
+slug: alpha-post
 date: 2024-02-01
-description: Practical Go
-tags: go, backend
+description: Practical Alpha
+tags: alpha, backend
 ---
-This post covers server-side Go.
+This post covers server-side Alpha.
 `)
-	mustWrite(t, filepath.Join(postsDir, "htmx.md"), `---
-title: HTMX Guide
-slug: htmx-guide
+	mustWrite(t, filepath.Join(postsDir, "beta.md"), `---
+title: Beta Guide
+slug: beta-guide
 date: 2024-01-01
-description: HTMX patterns
-tags: htmx, frontend
+description: Beta patterns
+tags: beta, frontend
 ---
 This post covers live search.
 `)
@@ -114,20 +152,20 @@ This post covers live search.
 		t.Fatalf("load: %v", err)
 	}
 
-	filtered := blog.Search("server", "go")
+	filtered := blog.Search("server", "alpha")
 	if got := len(filtered); got != 1 {
 		t.Fatalf("expected 1 matching post, got %d", got)
 	}
-	if filtered[0].Slug != "go-tips" {
-		t.Fatalf("expected go-tips, got %q", filtered[0].Slug)
+	if filtered[0].Slug != "alpha-post" {
+		t.Fatalf("expected alpha-post, got %q", filtered[0].Slug)
 	}
 
-	filtered = blog.Search("", "htmx")
+	filtered = blog.Search("", "beta")
 	if got := len(filtered); got != 1 {
 		t.Fatalf("expected 1 tag match, got %d", got)
 	}
-	if filtered[0].Slug != "htmx-guide" {
-		t.Fatalf("expected htmx-guide, got %q", filtered[0].Slug)
+	if filtered[0].Slug != "beta-guide" {
+		t.Fatalf("expected beta-guide, got %q", filtered[0].Slug)
 	}
 }
 

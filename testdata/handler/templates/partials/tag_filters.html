@@ -1,0 +1,25 @@
+{{define "tag_filters"}}
+{{if .Tags}}
+  {{ $query := urlquery .Query }}
+  <nav class="tag-filters" aria-label="Tags">
+    <ul class="tag-list">
+      {{range .Tags}}
+        {{ $tag := urlquery . }}
+        {{ $activeHref := "/search" }}
+        {{ $inactiveHref := printf "/search?tag=%s" $tag }}
+        {{if $.Query}}
+          {{ $activeHref = printf "/search?q=%s" $query }}
+          {{ $inactiveHref = printf "/search?q=%s&tag=%s" $query $tag }}
+        {{end}}
+        <li class="tag-list__item">
+          {{if eq $.Tag .}}
+            <a class="tag-pill tag-pill--active" aria-current="true" href="{{$activeHref}}">{{.}}</a>
+          {{else}}
+            <a class="tag-pill" href="{{$inactiveHref}}">{{.}}</a>
+          {{end}}
+        </li>
+      {{end}}
+    </ul>
+  </nav>
+{{end}}
+{{end}}

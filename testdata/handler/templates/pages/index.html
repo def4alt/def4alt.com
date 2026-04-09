@@ -1,0 +1,22 @@
+{{define "content"}}
+<header class="page-head">
+  <div class="page-head__copy">
+    <h1><a class="page-head__home" href="/">Def4alt's Blog</a></h1>
+  </div>
+  {{template "search_bar" .}}
+</header>
+
+{{template "tag_filters" .}}
+
+{{if .Posts}}
+  <section class="archive-section">
+    <div class="archive-grid">
+      {{range .Posts}}
+        {{template "post_list_item" .}}
+      {{end}}
+    </div>
+  </section>
+{{else}}
+  <p class="empty-state">No posts found.</p>
+{{end}}
+{{end}}

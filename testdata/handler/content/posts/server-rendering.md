@@ -11,6 +11,7 @@ image_alt: A colorful browser gallery scene
 
 Fast pages, simple data flow, and fewer moving parts.
 
+![A colorful browser gallery scene](/content/images/gallery-1.webp)
 
 ## Why it matters
 
@@ -19,8 +20,6 @@ Fast pages, simple data flow, and fewer moving parts.
 - easier caching
 
 > Server rendering keeps the browser honest.
-
-![A colorful browser gallery scene](/content/images/gallery-1.webp)
 
 It also works well with **bold text**, *emphasis*, ~~strikethrough~~, `inline code`, and [links](https://developer.mozilla.org/en-US/docs/Web/Markdown).
 

@@ -13,6 +13,7 @@ import (
 )
 
 type Handler struct {
+	root   string
 	render *render.Renderer
 	blog   *content.Blog
 }
@@ -27,8 +28,11 @@ type ViewData struct {
 	Post        content.Post
 }
 
-func New(r *render.Renderer, blog *content.Blog) *Handler {
-	return &Handler{render: r, blog: blog}
+func New(root string, r *render.Renderer, blog *content.Blog) *Handler {
+	if root == "" {
+		root = "."
+	}
+	return &Handler{root: root, render: r, blog: blog}
 }
 
 func (h *Handler) HandleHealthz(w http.ResponseWriter, r *http.Request) {

@@ -38,7 +38,7 @@ func run() error {
 		addr = ":" + addr
 	}
 
-	h := handler.New(r, blog)
+	h := handler.New(".", r, blog)
 	s := server.New(addr, h.Routes())
 
 	log.Printf("Starting server on %s", addr)
