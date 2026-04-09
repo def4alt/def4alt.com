@@ -1,8 +1,8 @@
 {{define "post_tags"}}
 {{if .Tags}}
-  <ul>
+  <ul class="tag-list" aria-label="Tags">
     {{range .Tags}}
-      <li><a href="/search?tag={{.}}">{{.}}</a></li>
+      <li class="tag-list__item"><a class="tag-pill" href="/search?tag={{.}}">{{.}}</a></li>
     {{end}}
   </ul>
 {{end}}

@@ -1,10 +1,15 @@
 {{define "content"}}
-<header>
-  <p><a href="/">← Back</a></p>
-  <h1>Tag: {{.Tag}}</h1>
+<header class="page-head page-head--compact">
+  <div class="page-head__copy">
+    <a class="back-link" href="/">← Back</a>
+    <h1>Tag: {{.Tag}}</h1>
+    <p class="page-head__lede">Filtered posts.</p>
+  </div>
 </header>
 
 {{template "search_bar" .}}
+
+{{template "tag_filters" .}}
 
 {{template "post_list" .}}
 {{end}}

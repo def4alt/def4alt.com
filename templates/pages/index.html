@@ -1,22 +1,22 @@
 {{define "content"}}
-<header>
-  <h1>Def4alt's Blog</h1>
+<header class="page-head">
+  <div class="page-head__copy">
+    <h1><a class="page-head__home" href="/">Def4alt's Blog</a></h1>
+  </div>
+  {{template "search_bar" .}}
 </header>
 
-{{template "search_bar" .}}
+{{template "tag_filters" .}}
 
-{{if .Tags}}
-  <nav aria-label="Tags">
-    <p>Tags:</p>
-    <ul>
-      {{range .Tags}}
-        <li>
-          <a href="/search?tag={{.}}&q={{$.Query}}">{{.}}</a>
-        </li>
+{{if .Posts}}
+  <section class="archive-section">
+    <div class="archive-grid">
+      {{range .Posts}}
+        {{template "post_list_item" .}}
       {{end}}
-    </ul>
-  </nav>
+    </div>
+  </section>
+{{else}}
+  <p class="empty-state">No posts found.</p>
 {{end}}
-
-{{template "post_list" .}}
 {{end}}

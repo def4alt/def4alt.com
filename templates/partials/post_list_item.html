@@ -1,12 +1,17 @@
 {{define "post_list_item"}}
-<article>
-  <header>
-    <h2><a href="/posts/{{.Slug}}">{{.Title}}</a></h2>
-    {{if .Description}}
-      <p>{{.Description}}</p>
+<article class="post-card">
+  <a class="post-card__link" href="/posts/{{.Slug}}" aria-label="{{.Title}}"></a>
+  <figure class="post-card__media">
+    {{if .Image}}
+      <img class="post-card__image" src="{{.Image}}" alt="{{if .ImageAlt}}{{.ImageAlt}}{{else}}{{.Title}}{{end}}" onerror="this.hidden=true">
     {{end}}
-  </header>
+  </figure>
 
-  {{template "post_tags" .}}
+  <div class="post-card__body">
+    <p class="post-card__meta">{{.Date.Format "Jan 2, 2006"}}</p>
+    <h3 class="post-card__title">{{.Title}}</h3>
+    {{if .Description}}<p class="post-card__excerpt">{{.Description}}</p>{{end}}
+    {{template "post_tags" .}}
+  </div>
 </article>
 {{end}}

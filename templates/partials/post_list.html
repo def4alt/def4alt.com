@@ -1,11 +1,11 @@
 {{define "post_list"}}
-<section id="results">
+<section class="archive-grid" id="results">
   {{if .Posts}}
     {{range .Posts}}
       {{template "post_list_item" .}}
     {{end}}
   {{else}}
-    <p>No posts found.</p>
+    <p class="empty-state">No posts found.</p>
   {{end}}
 </section>
 {{end}}

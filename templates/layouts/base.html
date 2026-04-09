@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
     <title>{{if .Title}}{{.Title}} · Blog{{else}}Def4alt's Blog{{end}}</title>
     {{if .Description}}
       <meta name="description" content="{{.Description}}">
@@ -12,8 +13,8 @@
     <script src="/static/htmx.min.js" defer></script>
     <link rel="stylesheet" href="/static/app.css">
   </head>
-  <body hx-boost="true">
-    <main>
+  <body class="site" hx-boost="true">
+    <main class="site-main">
       {{template "content" .}}
     </main>
   </body>

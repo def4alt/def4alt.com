@@ -1,19 +1,23 @@
 {{define "search_bar"}}
-<form role="search" action="/search" method="get">
-  <label for="q">Search</label>
-  <input
-    id="q"
-    type="search"
-    name="q"
-    value="{{.Query}}"
-    placeholder="Search posts"
-    hx-get="/search"
-    hx-trigger="keyup changed delay:300ms"
-    hx-target="#results"
-    hx-select="#results"
-    hx-push-url="true"
-    hx-include="#selected-tag"
-  >
+<form class="search-bar" role="search" action="/search" method="get">
+  <div class="search-bar__field">
+    <input
+      class="search-bar__input"
+      id="q"
+      type="search"
+      name="q"
+      value="{{.Query}}"
+      placeholder="Search posts"
+      aria-label="Search"
+      hx-get="/search"
+      hx-trigger="keyup changed delay:300ms"
+      hx-target="#results"
+      hx-select="#results"
+      hx-push-url="true"
+      hx-include="#selected-tag"
+    >
+    <button class="search-bar__button" type="submit">Go</button>
+  </div>
   <input id="selected-tag" type="hidden" name="tag" value="{{.Tag}}">
 </form>
 {{end}}
